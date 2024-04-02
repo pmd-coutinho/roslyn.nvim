@@ -82,6 +82,14 @@ function M.spawn(cmd, target, settings, on_exit, on_attach, capabilities, roslyn
 
 	local target_uri = vim.uri_from_fname(target)
 
+	capabilities = vim.tbl_deep_extend("force", capabilities, {
+        textDocument = {
+            hover = {
+                contentFormat = { "markdown" },
+            },
+        }
+    })
+
 	-- capabilities = vim.tbl_deep_extend("force", capabilities, {
 	-- 	workspace = {
 	-- 		didChangeWatchedFiles = {
