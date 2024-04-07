@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        rid: ['osx-x64', 'osx-arm64', 'linux-x64', 'linux-arm64', 'alpine-x64', 'alpine-arm64', 'win-x64', 'win-x86', 'win-arm64']
+        rid: ['osx-x64', 'osx-arm64', 'alpine-x64', 'alpine-arm64', 'win-x64', 'win-x86', 'win-arm64']
 
     steps:
       - name: Checkout
